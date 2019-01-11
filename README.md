@@ -31,7 +31,7 @@ there would be a table showing information of the GPU. Otherwise, you are fucked
 	cd ..
 ```
 
-5. Install yarp and icub-main: can use the **yarp-install.sh** script
+5. Install yarp and icub-main: can use the [yarp-install.sh](https://github.com/towardthesea/KIA_vision_setting/blob/master/yarp-install.sh) script
 - Following the manual [here](http://wiki.icub.org/wiki/Linux:Installation_from_sources)
 
 6. Install dependencies:
@@ -53,6 +53,10 @@ there would be a table showing information of the GPU. Otherwise, you are fucked
 	git clone https://github.com/robotology/human-sensing.git --> only install **yarpOpenPose**
 	git clone https://github.com/robotology/skeleton3D.git
 ```
+Check out the Skeleton3D to KUKA branch: 
+```
+	git checkout devel-kuka
+```
 9. Import context of **yarpOpenPose** and edit the *model_folder* context file **yarpOpenPose.ini** into the path to installed *openpose/models*, e.g. `/home/vision/other-lib/openpose/models/`
 ```
 	yarp-config context --import yarpOpenPose
@@ -71,6 +75,8 @@ there would be a table showing information of the GPU. Otherwise, you are fucked
     - Open **Hand-eye calibration** tab and follow the on screen manual
 	- Measure the calibration grid
 	- Choose *sensor mounting* as **Static**
+	- Choose *Pose* as **XYZABC** format for the transformation
+	- Next Next Next
 
 
 
@@ -86,6 +92,7 @@ there would be a table showing information of the GPU. Otherwise, you are fucked
 ```
 - In yarpmanager, choose the application file from where you install **rc_yarp_wrapper**, e.g. `~/icub-workspace/rc_yarp_wrapper/app/script/rcCam_skeleton3D.xml`
 - Open a terminal and check the name of the camera by: `gc_config -l`
-- Fill the obtained name into the *device* parameter of the **rc_yarp_wrapper** application
-- Run all application and write your paper :))
+- Fill the obtained *name* (e.g. `enp2s0:02938142`) into the *--device* parameter of the **rc_yarp_wrapper** application
+- Run all application, Connect ports and write your paper :))
+
 
