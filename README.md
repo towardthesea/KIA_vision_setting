@@ -42,8 +42,9 @@ there would be a table showing information of the GPU. Otherwise, you are fucked
 	sudo apt-get install libboost-all-dev
 ```
 
-7. Install [openpose](git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose.git) at this commit (safe now):
+7. Install [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose.git) at this commit (safe now):
 ```
+	git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose.git
 	git checkout fbee9b65241ddbb7b80ab980bdd90838521a4dbb 
 ```
 
