@@ -1,4 +1,4 @@
-# Installation
+# Installation for KIA vision system
 1. [CUDA](https://developer.nvidia.com/cuda-downloads)
 - Choose deb(local) version
 - Then: 
@@ -64,12 +64,12 @@ Check out the Skeleton3D to KUKA branch:
 	gedit ~/.local/share/yarp/contexts/yarpOpenPose/yarpOpenPose.ini
 ```
 
-9. Install camera [driver](https://github.com/roboception/rc_genicam_api.git)
-10. Install camera [discover application](https://github.com/roboception/rcdiscover)
+10. Install camera [driver](https://github.com/roboception/rc_genicam_api.git)
+11. Install camera [discover application](https://github.com/roboception/rcdiscover)
 
-11. Install [rc_yarp_wrapper](https://github.com/robotology-playground/rc_yarp_wrapper) for the camera
+12. Install [rc_yarp_wrapper](https://github.com/robotology-playground/rc_yarp_wrapper) for the camera
 
-12. Calibration the camera wrt the robot with web-based application
+13. Calibration the camera wrt the robot with web-based application
     - Run `rcdiscover-gui`
     - Click on the available camera to launch the web-based application
     - In **depth image** tab, make sure that the quality is chosen as **Medium**. **High** option requires more computation hence lower frequency with different depth image size. You can try but don't blame me then :P. Play with Minimum and Maximum distance depending on your application.
@@ -81,12 +81,12 @@ Check out the Skeleton3D to KUKA branch:
 
 
 
-13. Fill down the frame transformation obtained in (11) in to **cam_in_robot** line of the configuration file `rc_yarp_wrapper.ini` of rc_yarp_wrapper* 
+14. Fill down the frame transformation obtained in (13) in to **cam_in_robot** line of the configuration file `rc_yarp_wrapper.ini` of rc_yarp_wrapper* 
 ```
 	yarp-config context --import rc_yarp_wrapper
 	gedit ~/.local/share/yarp/contexts/rc_yarp_wrapper/rc_yarp_wrapper.ini
 ```
-14. Running application (each following line in a terminal):
+15. Running application (each following line in a terminal):
 ```
 	yarpserver 
 	yarpmanager
