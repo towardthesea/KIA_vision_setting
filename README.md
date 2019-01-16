@@ -81,7 +81,7 @@ Check out the Skeleton3D to KUKA branch:
 
 
 
-14. Fill down the frame transformation obtained in (13) in to **cam_in_robot** line of the configuration file `rc_yarp_wrapper.ini` of rc_yarp_wrapper* 
+14. Fill down the frame transformation obtained in (13) in to **cam_in_robot** line of the configuration file `rc_yarp_wrapper.ini` of **rc_yarp_wrapper**. The first line only needs once!
 ```
 	yarp-config context --import rc_yarp_wrapper
 	gedit ~/.local/share/yarp/contexts/rc_yarp_wrapper/rc_yarp_wrapper.ini
