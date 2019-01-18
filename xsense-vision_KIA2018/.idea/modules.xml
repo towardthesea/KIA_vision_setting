@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/icub-workspace/kinStructureLearning/.idea/kinStructureLearning.iml" filepath="$USER_HOME$/icub-workspace/kinStructureLearning/.idea/kinStructureLearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/xsense-vision_KIA2018.iml" filepath="$PROJECT_DIR$/.idea/xsense-vision_KIA2018.iml" />
+    </modules>
+  </component>
+</project>
