@@ -74,7 +74,7 @@ Check out the Skeleton3D to KUKA branch:
     - Click on the available camera to launch the web-based application
     - In **depth image** tab, make sure that the quality is chosen as **Medium**. **High** option requires more computation hence lower frequency with different depth image size. You can try but don't blame me then :P. Play with Minimum and Maximum distance depending on your application.
     - Open **Hand-eye calibration** tab and follow the on screen manual
-	- Measure the calibration grid
+	- Measure the calibration grid (0.255(Width) x 0.175(Height))
 	- Choose *sensor mounting* as **Static**
 	- Choose *Pose* as **XYZABC** format for the transformation
 	- Next Next Next
@@ -83,12 +83,12 @@ Check out the Skeleton3D to KUKA branch:
 
 14. Fill down the frame transformation obtained in (13) in to **cam_in_robot** line of the configuration file `rc_yarp_wrapper.ini` of **rc_yarp_wrapper**. The first line only needs once!
 ```
-	yarp-config context --import rc_yarp_wrapper
+	yarp-config context --import rc_yarp_wrapper # only do this once after install yarp, machines, etc.
 	gedit ~/.local/share/yarp/contexts/rc_yarp_wrapper/rc_yarp_wrapper.ini
 ```
 15. Running application (each following line in a terminal):
 ```
-	yarpserver 
+	yarpserver # add option --write if you change IP address
 	yarpmanager
 ```
 - In yarpmanager, choose the application file from where you install **rc_yarp_wrapper**, e.g. `~/icub-workspace/rc_yarp_wrapper/app/script/rcCam_skeleton3D.xml`
